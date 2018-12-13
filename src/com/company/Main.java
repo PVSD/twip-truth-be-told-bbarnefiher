@@ -1,5 +1,4 @@
 package com.company;
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 
 import java.util.*;
 import java.io.*;
@@ -9,10 +8,11 @@ public class Main {
 
         File file = new File("TruthTable.txt");
         FileWriter writer = new FileWriter(file);
-        writer.write("Hi Brain");
-        writer.close();
         Scanner stringReader = new Scanner(System.in);
         String userInput = stringReader.nextLine();
+        writer.write(Operator.getTruthTable(userInput));
+        writer.close();
+
         char[] inputArray = userInput.toCharArray();
 
         // FIRST CHECK. FIND PARENTHESES
@@ -30,7 +30,7 @@ public class Main {
                 break;
             secondPar++;
         }
-        System.out.println(Operator.getTruthTable(userInput));
+       // System.out.println(Operator.getTruthTable(userInput));
         for (int i = firstPar; i < secondPar - 1; i++){
        //     if (inputArray[i] =={
 //
