@@ -5,7 +5,7 @@ package com.company;
  */
 public  class Operator{
     public  Operator (){
-
+//
     }
     static String truthTable;
     static char char1;
